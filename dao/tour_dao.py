@@ -88,15 +88,15 @@ class TourDao:
 
                     return updated_tour
 
-    def delete_tour(self, tour_id):
-        with pool.connection() as conn:
-            with conn.cursor() as cur:
-                cur.execute("DELETE FROM tours WHERE id = %s", (tour_id,))
-                row_deleted = cur.rowcount
-                if row_deleted != 1:
-                    return False
-                else:
-                    return True
-
+    # def delete_tour(self, tour_id):
+    #     with pool.connection() as conn:
+    #         with conn.cursor() as cur:
+    #             cur.execute("DELETE FROM tours WHERE id = %s", (tour_id,))
+    #             row_deleted = cur.rowcount
+    #             if row_deleted != 1:
+    #                 return False
+    #             else:
+    #                 return True
+    #
 
 
